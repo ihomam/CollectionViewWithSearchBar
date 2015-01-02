@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CollectionViewCell.h
 //  collevtionViewWithSearchBar
 //
 //  Created by Homam on 2015-01-02.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *laName;
 
 @end
-

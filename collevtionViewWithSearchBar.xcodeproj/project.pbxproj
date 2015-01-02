@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		360C18E11A5728AD001A35A7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C18E01A5728AD001A35A7 /* main.m */; };
 		360C18E41A5728AD001A35A7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C18E31A5728AD001A35A7 /* AppDelegate.m */; };
-		360C18E71A5728AD001A35A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C18E61A5728AD001A35A7 /* ViewController.m */; };
 		360C18EA1A5728AD001A35A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 360C18E81A5728AD001A35A7 /* Main.storyboard */; };
 		360C18EC1A5728AD001A35A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360C18EB1A5728AD001A35A7 /* Images.xcassets */; };
 		360C18EF1A5728AD001A35A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360C18ED1A5728AD001A35A7 /* LaunchScreen.xib */; };
 		360C18FB1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C18FA1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m */; };
+		360C19091A5729C1001A35A7 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C19081A5729C1001A35A7 /* CollectionViewController.m */; };
+		360C190C1A57322C001A35A7 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C190B1A57322C001A35A7 /* CollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		360C18E01A5728AD001A35A7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		360C18E21A5728AD001A35A7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		360C18E31A5728AD001A35A7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		360C18E51A5728AD001A35A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		360C18E61A5728AD001A35A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		360C18E91A5728AD001A35A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		360C18EB1A5728AD001A35A7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		360C18EE1A5728AD001A35A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		360C18F41A5728AD001A35A7 /* collevtionViewWithSearchBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collevtionViewWithSearchBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		360C18F91A5728AD001A35A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		360C18FA1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collevtionViewWithSearchBarTests.m; sourceTree = "<group>"; };
+		360C19071A5729C1001A35A7 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		360C19081A5729C1001A35A7 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		360C190A1A57322C001A35A7 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
+		360C190B1A57322C001A35A7 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +86,14 @@
 			children = (
 				360C18E21A5728AD001A35A7 /* AppDelegate.h */,
 				360C18E31A5728AD001A35A7 /* AppDelegate.m */,
-				360C18E51A5728AD001A35A7 /* ViewController.h */,
-				360C18E61A5728AD001A35A7 /* ViewController.m */,
 				360C18E81A5728AD001A35A7 /* Main.storyboard */,
 				360C18EB1A5728AD001A35A7 /* Images.xcassets */,
 				360C18ED1A5728AD001A35A7 /* LaunchScreen.xib */,
 				360C18DE1A5728AD001A35A7 /* Supporting Files */,
+				360C19071A5729C1001A35A7 /* CollectionViewController.h */,
+				360C19081A5729C1001A35A7 /* CollectionViewController.m */,
+				360C190A1A57322C001A35A7 /* CollectionViewCell.h */,
+				360C190B1A57322C001A35A7 /* CollectionViewCell.m */,
 			);
 			path = collevtionViewWithSearchBar;
 			sourceTree = "<group>";
@@ -219,8 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				360C18E71A5728AD001A35A7 /* ViewController.m in Sources */,
+				360C190C1A57322C001A35A7 /* CollectionViewCell.m in Sources */,
 				360C18E41A5728AD001A35A7 /* AppDelegate.m in Sources */,
+				360C19091A5729C1001A35A7 /* CollectionViewController.m in Sources */,
 				360C18E11A5728AD001A35A7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +350,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -354,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
