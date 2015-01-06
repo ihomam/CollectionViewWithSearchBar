@@ -24,39 +24,54 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     // Do any additional setup after loading the view.
+    // datasource used when user search in collectionView
     self.dataSourceForSearchResult = [NSArray new];
+    
+    // normal datasource
     self.dataSource =@[@"Modesto",@"Rebecka",@"Andria",@"Sergio",@"Robby",@"Jacob",@"Lavera",@"Theola",@"Adella",@"Garry", @"Lawanda", @"Christiana", @"Billy", @"Claretta", @"Gina", @"Edna", @"Antoinette", @"Shantae", @"Jeniffer", @"Fred", @"Phylis", @"Raymon", @"Brenna", @"Gus", @"Ethan", @"Kimbery", @"Sunday", @"Darrin", @"Ruby", @"Babette", @"Latrisha", @"Dewey", @"Della", @"Dylan", @"Francina", @"Boyd", @"Willette", @"Mitsuko", @"Evan", @"Dagmar", @"Cecille", @"Doug", @"Jackeline", @"Yolanda", @"Patsy", @"Haley", @"Isaura", @"Tommye", @"Katherine", @"Vivian"];
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
--(void)dealloc{
-    [self.collectionView removeObserver:self forKeyPath:@"contentOffset" context:Nil];
-}
+
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.searchBarBoundsY = self.navigationController.navigationBar.frame.size.height + [UIApplication sharedApplication].statusBarFrame.size.height;
-    self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, self.searchBarBoundsY, [UIScreen mainScreen].bounds.size.width, 44)];
-    self.searchBar.searchBarStyle       = UISearchBarStyleMinimal;
-    self.searchBar.showsCancelButton    = YES;
-    self.searchBar.tintColor            = [UIColor whiteColor];
-    self.searchBar.barTintColor         = [UIColor whiteColor];
-    self.searchBar.delegate             = self;
-    self.searchBar.placeholder          = @"search here";
     
-    [self.view addSubview:self.searchBar];
+    // prepare the searchBar view
+    [self prepareSearchBar];
+    
+    // prepare collection view contentInset/ContentOffset so searchBar fit at the top
     self.collectionView.contentInset    = UIEdgeInsetsMake(self.searchBar.frame.size.height, 5, 0, 5);
     self.collectionView.contentOffset   = CGPointMake(0, -self.searchBar.frame.size.height);
 }
 -(void)viewDidAppear:(BOOL)animated{
-    [self.collectionView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+    // add KVO observer.. so we will be informed when user scroll colllectionView
+    [self addObservers];
 }
-
-#pragma mark <UICollectionViewDataSource>
-
+-(void)dealloc{
+    // remove Our KVO observer
+    [self removeObservers];
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+#pragma mark -
+-(void)prepareSearchBar{
+    if (!self.searchBar) {
+        self.searchBarBoundsY = self.navigationController.navigationBar.frame.size.height + [UIApplication sharedApplication].statusBarFrame.size.height;
+        self.searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, self.searchBarBoundsY, [UIScreen mainScreen].bounds.size.width, 44)];
+        self.searchBar.searchBarStyle       = UISearchBarStyleMinimal;
+        self.searchBar.showsCancelButton    = YES;
+        self.searchBar.tintColor            = [UIColor whiteColor];
+        self.searchBar.barTintColor         = [UIColor whiteColor];
+        self.searchBar.delegate             = self;
+        self.searchBar.placeholder          = @"search here";
+        
+        [self.view addSubview:self.searchBar];
+    }
+}
+#pragma mark - CollectionViewDataSourc
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
@@ -89,13 +104,17 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    // user did type something, check our datasource for text that looks the same
     if (searchText.length>0) {
+        // search and reload data source
         [self filterContentForSearchText:searchText
                                    scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
                                           objectAtIndex:[self.searchDisplayController.searchBar
                                                          selectedScopeButtonIndex]]];
         [self.collectionView reloadData];
     }else{
+        // if text lenght == 0 ... means no text
+        // display all content on user face :D
         self.dataSourceForSearchResult = self.dataSource;
         [self.collectionView reloadData];
     }
@@ -116,6 +135,13 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
     self.searchBarActive = NO;
+}
+#pragma mark - observer 
+- (void)addObservers{
+    [self.collectionView addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+}
+- (void)removeObservers{
+    [self.collectionView removeObserver:self forKeyPath:@"contentOffset" context:Nil];
 }
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(UICollectionView *)object change:(NSDictionary *)change context:(void *)context{
     if ([keyPath isEqualToString:@"contentOffset"] && object == self.collectionView ) {
