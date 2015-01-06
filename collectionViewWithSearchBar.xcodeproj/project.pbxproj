@@ -15,6 +15,7 @@
 		360C18FB1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C18FA1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m */; };
 		360C19091A5729C1001A35A7 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C19081A5729C1001A35A7 /* CollectionViewController.m */; };
 		360C190C1A57322C001A35A7 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C190B1A57322C001A35A7 /* CollectionViewCell.m */; };
+		369ABD951A5C70CA0068DC5A /* CollectionViewWithSearchBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 369ABD941A5C70CA0068DC5A /* CollectionViewWithSearchBar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		360C19081A5729C1001A35A7 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		360C190A1A57322C001A35A7 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		360C190B1A57322C001A35A7 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		369ABD941A5C70CA0068DC5A /* CollectionViewWithSearchBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CollectionViewWithSearchBar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		360C18DE1A5728AD001A35A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				369ABD941A5C70CA0068DC5A /* CollectionViewWithSearchBar.png */,
 				360C18DF1A5728AD001A35A7 /* Info.plist */,
 				360C18E01A5728AD001A35A7 /* main.m */,
 			);
@@ -204,6 +207,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				369ABD951A5C70CA0068DC5A /* CollectionViewWithSearchBar.png in Resources */,
 				360C18EA1A5728AD001A35A7 /* Main.storyboard in Resources */,
 				360C18EF1A5728AD001A35A7 /* LaunchScreen.xib in Resources */,
 				360C18EC1A5728AD001A35A7 /* Images.xcassets in Resources */,
@@ -420,6 +424,7 @@
 				360C19001A5728AD001A35A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		360C19011A5728AD001A35A7 /* Build configuration list for PBXNativeTarget "collectionViewWithSearchBarTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +433,7 @@
 				360C19031A5728AD001A35A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
