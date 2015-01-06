@@ -68,6 +68,8 @@ static NSString * const reuseIdentifier = @"Cell";
         self.searchBar.delegate             = self;
         self.searchBar.placeholder          = @"search here";
         
+        [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[UIColor whiteColor]];
+        
         [self.view addSubview:self.searchBar];
     }
 }
