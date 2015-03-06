@@ -88,14 +88,9 @@
 			children = (
 				360C18E21A5728AD001A35A7 /* AppDelegate.h */,
 				360C18E31A5728AD001A35A7 /* AppDelegate.m */,
-				360C18E81A5728AD001A35A7 /* Main.storyboard */,
-				360C18EB1A5728AD001A35A7 /* Images.xcassets */,
-				360C18ED1A5728AD001A35A7 /* LaunchScreen.xib */,
+				364C78731AAA413700291027 /* Views */,
+				364C78741AAA415F00291027 /* Controllers */,
 				360C18DE1A5728AD001A35A7 /* Supporting Files */,
-				360C19071A5729C1001A35A7 /* CollectionViewController.h */,
-				360C19081A5729C1001A35A7 /* CollectionViewController.m */,
-				360C190A1A57322C001A35A7 /* CollectionViewCell.h */,
-				360C190B1A57322C001A35A7 /* CollectionViewCell.m */,
 			);
 			path = collevtionViewWithSearchBar;
 			sourceTree = "<group>";
@@ -103,6 +98,7 @@
 		360C18DE1A5728AD001A35A7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				360C18EB1A5728AD001A35A7 /* Images.xcassets */,
 				369ABD941A5C70CA0068DC5A /* CollectionViewWithSearchBar.png */,
 				360C18DF1A5728AD001A35A7 /* Info.plist */,
 				360C18E01A5728AD001A35A7 /* main.m */,
@@ -125,6 +121,26 @@
 				360C18F91A5728AD001A35A7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		364C78731AAA413700291027 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				360C190A1A57322C001A35A7 /* CollectionViewCell.h */,
+				360C190B1A57322C001A35A7 /* CollectionViewCell.m */,
+				360C18E81A5728AD001A35A7 /* Main.storyboard */,
+				360C18ED1A5728AD001A35A7 /* LaunchScreen.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		364C78741AAA415F00291027 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				360C19071A5729C1001A35A7 /* CollectionViewController.h */,
+				360C19081A5729C1001A35A7 /* CollectionViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -364,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

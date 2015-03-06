@@ -7,6 +7,11 @@
 		<key>collectionViewWithSearchBar.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>collectionViewWithSearchBarTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
 	</dict>
