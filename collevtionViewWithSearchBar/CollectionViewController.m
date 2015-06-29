@@ -41,10 +41,6 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewWillAppear:animated];
     [self prepareUI];
 }
--(void)viewDidAppear:(BOOL)animated{
-    // add KVO observer.. so we will be informed when user scroll colllectionView
-    [self addObservers];
-}
 -(void)dealloc{
     // remove Our KVO observer
     [self removeObservers];
@@ -168,6 +164,9 @@ static NSString * const reuseIdentifier = @"Cell";
         self.searchBar.placeholder          = @"search here";
         
         [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTextColor:[UIColor whiteColor]];
+
+        // add KVO observer.. so we will be informed when user scroll colllectionView
+        [self addObservers];
     }
     
     if (![self.searchBar isDescendantOfView:self.view]) {
