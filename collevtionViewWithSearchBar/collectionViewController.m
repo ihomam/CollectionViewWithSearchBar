@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Homam. All rights reserved.
 //
 
-#import "CollectionViewController.h"
+#import "collectionViewController.h"
 #import "CollectionViewCell.h"
-@interface CollectionViewController ()<UISearchBarDelegate>
+@interface collectionViewController ()<UISearchBarDelegate>
 
     @property (nonatomic,strong) NSArray        *dataSource;
     @property (nonatomic,strong) NSArray        *dataSourceForSearchResult;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation CollectionViewController
+@implementation collectionViewController
 
 static NSString * const reuseIdentifier = @"Cell";
 

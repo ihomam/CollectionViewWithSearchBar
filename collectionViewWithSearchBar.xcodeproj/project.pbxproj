@@ -13,9 +13,10 @@
 		360C18EC1A5728AD001A35A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360C18EB1A5728AD001A35A7 /* Images.xcassets */; };
 		360C18EF1A5728AD001A35A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 360C18ED1A5728AD001A35A7 /* LaunchScreen.xib */; };
 		360C18FB1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C18FA1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m */; };
-		360C19091A5729C1001A35A7 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C19081A5729C1001A35A7 /* CollectionViewController.m */; };
+		360C19091A5729C1001A35A7 /* collectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C19081A5729C1001A35A7 /* collectionViewController.m */; };
 		360C190C1A57322C001A35A7 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 360C190B1A57322C001A35A7 /* CollectionViewCell.m */; };
 		369ABD951A5C70CA0068DC5A /* CollectionViewWithSearchBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 369ABD941A5C70CA0068DC5A /* CollectionViewWithSearchBar.png */; };
+		36F8D3CE1C2ADA6500A1942F /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F8D3CD1C2ADA6500A1942F /* CollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +41,13 @@
 		360C18F41A5728AD001A35A7 /* collectionViewWithSearchBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectionViewWithSearchBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		360C18F91A5728AD001A35A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		360C18FA1A5728AD001A35A7 /* collevtionViewWithSearchBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collevtionViewWithSearchBarTests.m; sourceTree = "<group>"; };
-		360C19071A5729C1001A35A7 /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
-		360C19081A5729C1001A35A7 /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		360C19071A5729C1001A35A7 /* collectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionViewController.h; sourceTree = "<group>"; };
+		360C19081A5729C1001A35A7 /* collectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionViewController.m; sourceTree = "<group>"; };
 		360C190A1A57322C001A35A7 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		360C190B1A57322C001A35A7 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		369ABD941A5C70CA0068DC5A /* CollectionViewWithSearchBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CollectionViewWithSearchBar.png; sourceTree = "<group>"; };
+		36F8D3C81C2AD94D00A1942F /* collectionViewWithSearchBar-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "collectionViewWithSearchBar-Bridging-Header.h"; sourceTree = "<group>"; };
+		36F8D3CD1C2ADA6500A1942F /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,8 +140,10 @@
 		364C78741AAA415F00291027 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				360C19071A5729C1001A35A7 /* CollectionViewController.h */,
-				360C19081A5729C1001A35A7 /* CollectionViewController.m */,
+				360C19071A5729C1001A35A7 /* collectionViewController.h */,
+				360C19081A5729C1001A35A7 /* collectionViewController.m */,
+				36F8D3C81C2AD94D00A1942F /* collectionViewWithSearchBar-Bridging-Header.h */,
+				36F8D3CD1C2ADA6500A1942F /* CollectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 		360C18D31A5728AD001A35A7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = Homam;
 				TargetAttributes = {
@@ -246,8 +252,9 @@
 			files = (
 				360C190C1A57322C001A35A7 /* CollectionViewCell.m in Sources */,
 				360C18E41A5728AD001A35A7 /* AppDelegate.m in Sources */,
-				360C19091A5729C1001A35A7 /* CollectionViewController.m in Sources */,
+				360C19091A5729C1001A35A7 /* collectionViewController.m in Sources */,
 				360C18E11A5728AD001A35A7 /* main.m in Sources */,
+				36F8D3CE1C2ADA6500A1942F /* CollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,10 +377,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = collectionViewWithSearchBar;
+				SWIFT_OBJC_BRIDGING_HEADER = "collevtionViewWithSearchBar/collectionViewWithSearchBar-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -382,10 +392,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = collectionViewWithSearchBar;
+				SWIFT_OBJC_BRIDGING_HEADER = "collevtionViewWithSearchBar/collectionViewWithSearchBar-Bridging-Header.h";
 			};
 			name = Release;
 		};
