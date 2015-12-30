@@ -193,7 +193,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Homam;
 				TargetAttributes = {
 					360C18DA1A5728AD001A35A7 = {
@@ -316,6 +316,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -381,6 +382,7 @@
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "homam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = collectionViewWithSearchBar;
 				SWIFT_OBJC_BRIDGING_HEADER = "collevtionViewWithSearchBar/collectionViewWithSearchBar-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -396,6 +398,7 @@
 				INFOPLIST_FILE = collevtionViewWithSearchBar/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "homam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = collectionViewWithSearchBar;
 				SWIFT_OBJC_BRIDGING_HEADER = "collevtionViewWithSearchBar/collectionViewWithSearchBar-Bridging-Header.h";
 			};
@@ -415,6 +418,7 @@
 				);
 				INFOPLIST_FILE = collevtionViewWithSearchBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "homam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = collectionViewWithSearchBarTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/collevtionViewWithSearchBar.app/collevtionViewWithSearchBar";
 			};
@@ -430,6 +434,7 @@
 				);
 				INFOPLIST_FILE = collevtionViewWithSearchBarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "homam.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = collectionViewWithSearchBarTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/collevtionViewWithSearchBar.app/collevtionViewWithSearchBar";
 			};

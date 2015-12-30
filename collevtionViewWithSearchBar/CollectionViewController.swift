@@ -19,7 +19,7 @@ class CollectionViewController: UICollectionViewController, UISearchBarDelegate 
     
     override func viewDidLoad() {
         
-        self.dataSource = ["Modesto","Rebecka","Andria","Sergio","Robby","Jacob","Lavera", "Theola", "Adella","Garry", "Lawanda", "Christiana", "Billy", "Claretta", "Gina", "Edna", "Antoinette", "Shantae", "Jeniffer", "Fred", "Phylis", "Raymon", "Brenna", "Gus", "Ethan", "Kimbery", "Sunday", "Darrin", "Ruby", "Babette", "Latrisha", "Dewey", "Della", "Dylan", "Francina", "Boyd", "Willette", "Mitsuko", "Evan", "Dagmar", "Cecille", "Doug",
+        self.dataSource = ["Modesto","Rebecka","Andria","Sergio","Robby","Jacob","Lavera", "Theola", "Adella","Garry", "Lawanda", "Christiana", "Billy", "Claretta", "Gina", "Edna", "Antoinette", "Shantae", "Jeniffer", "Fred", "Phylis", "Raymon", "Brenna", "Gulfs", "Ethan", "Kimbery", "Sunday", "Darrin", "Ruby", "Babette", "Latrisha", "Dewey", "Della", "Dylan", "Francina", "Boyd", "Willette", "Mitsuko", "Evan", "Dagmar", "Cecille", "Doug",
             "Jackeline", "Yolanda", "Patsy", "Haley", "Isaura", "Tommye", "Katherine", "Vivian"]
         
         self.dataSourceForSearchResult = [String]()
@@ -87,7 +87,7 @@ class CollectionViewController: UICollectionViewController, UISearchBarDelegate 
     
     
     // MARK: Search 
-    func filterContentForSearchText(searchText:String, scope:String){
+    func filterContentForSearchText(searchText:String){
         self.dataSourceForSearchResult = self.dataSource?.filter({ (text:String) -> Bool in
             return text.containsString(searchText)
         })
@@ -97,14 +97,14 @@ class CollectionViewController: UICollectionViewController, UISearchBarDelegate 
         // user did type something, check our datasource for text that looks the same
         if searchText.characters.count > 0 {
             // search and reload data source
-            self.searchBarActive = true
-            let scope:String = (self.searchDisplayController?.searchBar.scopeButtonTitles![(self.searchDisplayController?.searchBar.selectedScopeButtonIndex)!])!
-            self .filterContentForSearchText(searchText,scope:scope)
+            self.searchBarActive    = true
+            self.filterContentForSearchText(searchText)
             self.collectionView?.reloadData()
         }else{
             // if text lenght == 0
             // we will consider the searchbar is not active
             self.searchBarActive = false
+            self.collectionView?.reloadData()
         }
 
     }
